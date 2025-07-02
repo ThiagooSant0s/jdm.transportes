@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JDM Transportes - Logística para Empresas em Todo o Brasil</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Favicon (ícone da aba do navegador) -->
+    <link rel="icon" href="https://placehold.co/32x32/2A437C/FFFFFF?text=JDM" type="image/png">
+
+    <!-- Configuração do Tailwind CSS com as cores e fontes do projeto -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'jdm-blue': '#2A437C', // Azul corporativo do caminhão
+                        'jdm-yellow': '#FFC107', // Amarelo para botões de ação
+                        'jdm-gray': '#F0F2F5', // Cinza claro para fundos
+                        'dark-text': '#1f2937',
+                        'light-text': '#4b5563',
+                    },
+                    fontFamily: {
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                        'roboto': ['Roboto', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilo para garantir que o background da imagem do herói não repita e cubra a área */
+        /* ATUALIZAÇÃO: Agora usa uma imagem da sua pasta local. */
+        .hero-bg {
+            background-image: url('./imagens/caminhao2.png');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="font-roboto bg-white">
+
+    <!-- CABEÇALHO E NAVEGAÇÃO -->
+    <header id="header" class="bg-white shadow-md fixed w-full top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#inicio" class="text-2xl font-montserrat font-bold text-jdm-blue">
+                JDM Transportes
+            </a>
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="#sobre" class="text-gray-600 hover:text-jdm-blue transition">Sobre Nós</a>
+                <a href="#servicos" class="text-gray-600 hover:text-jdm-blue transition">Serviços</a>
+                <a href="#contato" class="text-gray-600 hover:text-jdm-blue transition">Contato</a>
+            </nav>
+            <a href="#contato" class="hidden md:block bg-jdm-yellow text-jdm-blue font-bold py-2 px-5 rounded-lg shadow-lg hover:bg-yellow-400 transition transform hover:scale-105">
+                Solicite um Orçamento
+            </a>
+            <!-- Menu Mobile -->
+            <button id="mobile-menu-button" class="md:hidden text-jdm-blue">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <!-- Navegação Mobile (escondida por padrão) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <a href="#sobre" class="block text-center py-3 px-6 text-gray-600 hover:bg-jdm-gray">Sobre Nós</a>
+            <a href="#servicos" class="block text-center py-3 px-6 text-gray-600 hover:bg-jdm-gray">Serviços</a>
+            <a href="#contato" class="block text-center py-3 px-6 text-gray-600 hover:bg-jdm-gray">Contato</a>
+            <a href="#contato" class="block text-center bg-jdm-yellow text-jdm-blue font-bold py-3 px-6 m-4 rounded-lg">
+                Solicite um Orçamento
+            </a>
+        </div>
+    </header>
+
+    <!-- SEÇÃO INÍCIO (HERO) -->
+    <section id="inicio" class="hero-bg min-h-screen flex items-center justify-center pt-16">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h1 class="text-4xl md:text-6xl font-montserrat font-bold text-white leading-tight mb-4">
+                Sua Carga Entregue com Segurança em Todo o Brasil.
+            </h1>
+            <p class="text-lg md:text-xl text-jdm-gray mb-8 max-w-3xl mx-auto">
+                Soluções em transporte de cargas para empresas. Conectamos seu negócio a qualquer destino com eficiência, pontualidade e o melhor custo-benefício.
+            </p>
+            <a href="#contato" class="bg-jdm-yellow text-jdm-blue font-bold text-lg py-4 px-8 rounded-lg shadow-xl hover:bg-yellow-400 transition transform hover:scale-105">
+                SOLICITE UM ORÇAMENTO RÁPIDO
+            </a>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DIFERENCIAIS -->
+    <section class="py-16 bg-jdm-gray">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-montserrat font-bold text-center text-dark-text mb-12">Por que escolher a JDM Transportes?</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <!-- Item 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="flex justify-center mb-4">
+                        <svg class="h-12 w-12 text-jdm-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-montserrat font-bold text-dark-text mb-2">Cobertura Nacional</h3>
+                    <p class="text-light-text">De norte a sul, sua carga chega ao destino certo. Atendemos todo o território brasileiro com rotas otimizadas.</p>
+                </div>
+                <!-- Item 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                     <div class="flex justify-center mb-4">
+                        <svg class="h-12 w-12 text-jdm-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.286zm0 13.036h.008v.008h-.008v-.008z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-montserrat font-bold text-dark-text mb-2">Qualidade e Segurança</h3>
+                    <p class="text-light-text">Nossos veículos são revisados e nossa equipe é treinada para garantir a integridade da sua mercadoria do início ao fim.</p>
+                </div>
+                <!-- Item 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                     <div class="flex justify-center mb-4">
+                        <svg class="h-12 w-12 text-jdm-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.75A.75.75 0 013 4.5h.75m0 0h.75A.75.75 0 015.25 6v.75m0 0v.75A.75.75 0 014.5 8.25h-.75m0 0h.75a.75.75 0 01.75.75v.75m0 0v.75A.75.75 0 013.75 11.25h-.75m0 0h.75a.75.75 0 01.75.75v.75m0 0v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75m0 0v-.75A.75.75 0 012.25 12h.75m0 0h.75a.75.75 0 01.75.75v.75m0 0pM3.75 15h.75a.75.75 0 01.75.75v.75m0 0v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75m0 0v-.75A.75.75 0 013 15h.75m0 0h.75a.75.75 0 01.75.75v.75m0 0v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75m0 0v-.75a.75.75 0 01.75-.75h.75m-9 1.5h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-montserrat font-bold text-dark-text mb-2">Preço Justo e Transparente</h3>
+                    <p class="text-light-text">Oferecemos orçamentos claros e competitivos, sem surpresas. O melhor serviço pelo preço que cabe no seu planejamento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO SOBRE NÓS -->
+    <section id="sobre" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <!-- ATUALIZAÇÃO: Agora usa uma imagem da sua pasta local. -->
+                    <img src="./imagens/caminhao.png" alt="Equipe de logística trabalhando em um armazém" class="rounded-lg shadow-2xl w-full">
+                </div>
+                <div>
+                    <h2 class="text-3xl font-montserrat font-bold text-dark-text mb-4">Mais que uma transportadora, uma parceira de negócios.</h2>
+                    <p class="text-light-text mb-4">
+                        A JDM Transportes nasceu com uma missão clara: oferecer uma solução de logística confiável e acessível para empresas que precisam conectar seus produtos a todo o Brasil. Entendemos que cada carga carrega o valor do seu trabalho e, por isso, tratamos cada entrega com a máxima prioridade e cuidado.
+                    </p>
+                    <p class="text-light-text">
+                        Nossa frota, liderada pelo versátil e robusto Kia Bongo, está preparada para os desafios das estradas brasileiras, garantindo que sua mercadoria chegue com segurança e pontualidade. Mais do que mover caixas, nosso objetivo é construir parcerias duradouras, baseadas na confiança e na qualidade do serviço prestado.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO SERVIÇOS -->
+    <section id="servicos" class="py-20 bg-jdm-gray">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-montserrat font-bold text-center text-dark-text mb-12">Soluções de Transporte Sob Medida para Sua Empresa</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Serviço 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center border-t-4 border-jdm-blue">
+                    <h3 class="text-xl font-montserrat font-bold text-dark-text mb-2">Carga Dedicada</h3>
+                    <p class="text-light-text">Um veículo exclusivo para a sua mercadoria, garantindo agilidade máxima na entrega. Ideal para cargas urgentes, de alto valor ou que exigem manuseio especial.</p>
+                </div>
+                <!-- Serviço 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center border-t-4 border-jdm-blue">
+                    <h3 class="text-xl font-montserrat font-bold text-dark-text mb-2">Carga Fracionada</h3>
+                    <p class="text-light-text">Uma opção de excelente custo-benefício. Sua carga viaja junto com outras mercadorias, otimizando o espaço do veículo e reduzindo os custos do frete.</p>
+                </div>
+                <!-- Serviço 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center border-t-4 border-jdm-blue">
+                    <h3 class="text-xl font-montserrat font-bold text-dark-text mb-2">Distribuição</h3>
+                    <p class="text-light-text">Planejamos e executamos rotas de distribuição para que seus produtos cheguem a múltiplos destinos com eficiência e organização.</p>
+                </div>
+            </div>
+            <div class="mt-12 text-center bg-yellow-100 border-l-4 border-jdm-yellow text-yellow-800 p-4 rounded-md max-w-4xl mx-auto">
+                <p class="font-bold">Atenção:</p>
+                <p>Nosso foco é 100% em transporte para empresas (B2B). Não realizamos mudanças residenciais ou fretes para pessoas físicas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO CONTATO E ORÇAMENTO -->
+    <section id="contato" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-montserrat font-bold text-center text-dark-text mb-12">Fale com um especialista e solicite seu orçamento</h2>
+            <div class="max-w-4xl mx-auto bg-jdm-gray p-8 sm:p-12 rounded-lg shadow-xl">
+                <!-- 
+                  ATUALIZAÇÃO IMPORTANTE DO FORMULÁRIO:
+                  1. Crie uma conta em formspree.io com o seu e-mail.
+                  2. Crie um novo formulário e copie o link fornecido.
+                  3. Cole o seu link pessoal abaixo, no lugar de "SEU_CODIGO_AQUI".
+                -->
+                <form action="https://formspree.io/f/xldnzqgn" method="POST">
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="nome" class="block text-sm font-medium text-light-text">Nome Completo</label>
+                            <input type="text" id="nome" name="nome" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-jdm-blue focus:border-jdm-blue">
+                        </div>
+                        <div>
+                            <label for="empresa" class="block text-sm font-medium text-light-text">Nome da Empresa</label>
+                            <input type="text" id="empresa" name="empresa" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-jdm-blue focus:border-jdm-blue">
+                        </div>
+                        <div>
+                            <!-- O campo de email agora tem o nome 'email' para o Formspree funcionar corretamente -->
+                            <label for="email" class="block text-sm font-medium text-light-text">E-mail</label>
+                            <input type="email" id="email" name="email" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-jdm-blue focus:border-jdm-blue">
+                        </div>
+                        <div>
+                            <label for="telefone" class="block text-sm font-medium text-light-text">Telefone / WhatsApp</label>
+                            <input type="tel" id="telefone" name="telefone" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-jdm-blue focus:border-jdm-blue">
+                        </div>
+                         <div>
+                            <label for="origem" class="block text-sm font-medium text-light-text">Cidade de Origem</label>
+                            <input type="text" id="origem" name="origem" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-jdm-blue focus:border-jdm-blue">
+                        </div>
+                         <div>
+                            <label for="destino" class="block text-sm font-medium text-light-text">Cidade de Destino</label>
+                            <input type="text" id="destino" name="destino" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-jdm-blue focus:border-jdm-blue">
+                        </div>
+                        <div class="sm:col-span-2">
+                            <label for="mensagem" class="block text-sm font-medium text-light-text">Tipo de Carga / Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" rows="4" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-jdm-blue focus:border-jdm-blue"></textarea>
+                        </div>
+                    </div>
+                    <div class="mt-8 text-center">
+                        <button type="submit" class="w-full sm:w-auto bg-jdm-yellow text-jdm-blue font-bold text-lg py-3 px-12 rounded-lg shadow-lg hover:bg-yellow-400 transition transform hover:scale-105">
+                            ENVIAR E SOLICITAR COTAÇÃO
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="bg-jdm-blue text-white">
+        <div class="container mx-auto px-6 py-8">
+            <div class="sm:flex sm:justify-between sm:items-center text-center">
+                <p class="text-lg font-montserrat font-bold">JDM Transportes</p>
+                <p class="mt-4 sm:mt-0">&copy; <span id="year"></span> JDM Transportes. Todos os direitos reservados.</p>
+                <div class="flex justify-center mt-4 sm:mt-0 space-x-4">
+                    <!-- ATUALIZAÇÃO DO LINK DO WHATSAPP -->
+                    <a href="https://wa.me/5511973916533" target="_blank" rel="noopener noreferrer" class="hover:text-jdm-yellow transition">WhatsApp</a>
+                    <!-- ATUALIZAÇÃO DO LINK DO EMAIL -->
+                    <a href="mailto:jdm.transportes@hotmail.com" class="hover:text-jdm-yellow transition">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- SCRIPTS -->
+    <script>
+        // Script para menu mobile
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Fechar menu mobile ao clicar em um link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Script para ano atual no rodapé
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
